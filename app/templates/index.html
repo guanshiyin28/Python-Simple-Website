@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-2xl font-bold">Welcome to My Microblog </h1>
+    <img src="{{url_for('static',filename='images/'+ profile.photo)}}" alt="Profile" class="w-32 h-32 rounded-full border-2 border-gray-300 shadow-md mt-5 mb-5">
+
+    <p><i>Assalamualaikum wr wb,</i> </p>
+    <p>Haloo.. nama saya <b>{{ profile.name }}</b>, senang bisa berbagi sedikit tentang diri saya di microblog ini.  </p>
+{% endblock %}
