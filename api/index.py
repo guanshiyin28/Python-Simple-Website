@@ -1,22 +1,42 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import logging
 
 app = Flask(__name__)
 
+# Set up logging
+logging.basicConfig(filename='error.log', level=logging.DEBUG)
+
 @app.route('/')
 def home():
-    return render_template('home.html')
+    try:
+        return render_template('home.html')
+    except Exception as e:
+        app.logger.error(f"Error rendering home.html: {e}")
+        return "Internal Server Error", 500
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    try:
+        return render_template('about.html')
+    except Exception as e:
+        app.logger.error(f"Error rendering about.html: {e}")
+        return "Internal Server Error", 500
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html')
+    try:
+        return render_template('projects.html')
+    except Exception as e:
+        app.logger.error(f"Error rendering projects.html: {e}")
+        return "Internal Server Error", 500
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    try:
+        return render_template('contact.html')
+    except Exception as e:
+        app.logger.error(f"Error rendering contact.html: {e}")
+        return "Internal Server Error", 500
 
 if __name__ == '__main__':
     app.run(debug=True)
