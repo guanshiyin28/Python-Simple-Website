@@ -56,3 +56,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
      <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=100:FF0000,20:F0F0F0&section=footer&reversal=false&textBg=false&fontAlignY=50&descAlign=48&descAlignY=59"/>
   </a>
 </div>
+
