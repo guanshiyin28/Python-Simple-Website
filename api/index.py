@@ -38,6 +38,10 @@ def contact():
         app.logger.error(f"Error rendering contact.html: {e}")
         return "Internal Server Error", 500
 
+@app.route('/health')
+def health_check():
+    return "Server is healthy", 200
+
 @app.errorhandler(500)
 def internal_error(error):
     app.logger.error(f"Server Error: {error}, Route: {request.url}")
