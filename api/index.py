@@ -38,5 +38,10 @@ def contact():
         app.logger.error(f"Error rendering contact.html: {e}")
         return "Internal Server Error", 500
 
+@app.errorhandler(500)
+def internal_error(error):
+    app.logger.error(f"Server Error: {error}, Route: {request.url}")
+    return "500 error: Internal Server Error", 500
+
 if __name__ == '__main__':
     app.run(debug=True)
