@@ -43,5 +43,10 @@ def internal_error(error):
     app.logger.error(f"Server Error: {error}, Route: {request.url}")
     return "500 error: Internal Server Error", 500
 
+@app.errorhandler(404)
+def not_found_error(error):
+    app.logger.error(f"Page Not Found: {error}, Route: {request.url}")
+    return "404 error: Page Not Found", 404
+
 if __name__ == '__main__':
     app.run(debug=True)
