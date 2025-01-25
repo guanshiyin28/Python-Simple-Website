@@ -4,21 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="./static/style.css" />
+    <link rel="icon" href="./static/logo.png" type="image/png" />
   </head>
   <body>
     <header>
-      <h1>Welcome to My Portfolio</h1>
+      <img
+        src="./static/logo.png"
+        alt="Logo"
+        style="height: 50px; vertical-align: middle"
+      />
+      <h1 style="display: inline; margin-left: 10px">
+        Welcome to My Portfolio
+      </h1>
     </header>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
     <main>
-      <section>
+      <section id="about">
         <h2>About Me</h2>
         <p>This is a brief description about me.</p>
       </section>
-      <section>
+      <section id="projects">
         <h2>Projects</h2>
-        <p>Details of my projects will go here.</p>
+        <div class="project-card">
+          <h3>Project 1</h3>
+          <p>Details of my first project.</p>
+        </div>
+        <div class="project-card">
+          <h3>Project 2</h3>
+          <p>Details of my second project.</p>
+        </div>
+        <!-- Add more project cards as needed -->
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          You can contact me at
+          <a href="mailto:example@example.com">example@example.com</a>.
+        </p>
       </section>
     </main>
+    <footer>
+      <p>&copy; 2025 My Portfolio</p>
+    </footer>
   </body>
 </html>
